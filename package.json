@@ -1,0 +1,13 @@
+﻿{
+  "name": "blitzersafe-landing-page",
+  "version": "1.0.0",
+  "description": "BlitzerSafe Landing Page",
+  "scripts": {
+    "test:lint": "htmlhint index.html impressum.html datenschutz.html agb.html cookies.html",
+    "test:validate": "node tests/validate.js",
+    "test": "npm run test:lint && npm run test:validate"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4"
+  }
+}
