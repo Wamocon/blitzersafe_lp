@@ -275,3 +275,258 @@ body {
 /* ── 23. MOBILE NAV OVERLAY ───────────────────────────────────*/
 .mobile-nav-overlay { position:fixed; inset:0; z-index:98; background:rgba(7,11,20,.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); opacity:0; visibility:hidden; transition:opacity .25s,visibility .25s; }
 .mobile-nav-overlay.open { opacity:1; visibility:visible; }
+
+/* ═══════════════════════════════════════════════════════════════
+   24. LIGHT MODE – THEME-RESPONSIVE OVERRIDES
+   All always-dark sections become light in [data-theme="light"]
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Hero Section ───────────────────────────────────────────── */
+[data-theme="light"] #hero {
+  background: var(--bg) !important;
+}
+[data-theme="light"] #hero .orb { opacity: 0.12; }
+[data-theme="light"] .hero-text-col h1 {
+  color: var(--text) !important;
+}
+[data-theme="light"] .hero-text-col > p {
+  color: var(--muted) !important;
+}
+[data-theme="light"] .hero-badges > div {
+  color: var(--faint) !important;
+}
+[data-theme="light"] .hero-secondary-btn {
+  border-color: rgba(0,0,0,0.15) !important;
+  color: var(--muted) !important;
+}
+[data-theme="light"] .hero-secondary-btn:hover {
+  border-color: rgba(0,0,0,0.30) !important;
+  color: var(--text) !important;
+}
+
+/* ── Navbar (scrolled) ──────────────────────────────────────── */
+.trust-bar {
+  background: #0c1120;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+[data-theme="light"] .nav-scrolled {
+  background: rgba(248,250,252,0.96) !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.07), 0 4px 20px rgba(0,0,0,0.05) !important;
+}
+[data-theme="light"] .nav-scrolled .nav-brand-text {
+  color: var(--text) !important;
+}
+[data-theme="light"] .nav-scrolled nav {
+  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.09) !important;
+}
+[data-theme="light"] .nav-scrolled nav a {
+  color: var(--muted) !important;
+}
+[data-theme="light"] .nav-scrolled nav a:hover {
+  color: var(--text) !important;
+  background: rgba(0,0,0,0.05) !important;
+}
+
+/* ── Mobile Nav Dropdown ────────────────────────────────────── */
+[data-theme="light"] #mobile-nav {
+  background: rgba(248,250,252,0.98) !important;
+  border-color: rgba(0,0,0,0.09) !important;
+}
+[data-theme="light"] #mobile-nav a {
+  color: var(--muted) !important;
+}
+[data-theme="light"] #mobile-nav a:hover {
+  color: var(--text) !important;
+  background: rgba(0,0,0,0.04) !important;
+}
+[data-theme="light"] #mobile-nav hr {
+  border-color: var(--border) !important;
+}
+[data-theme="light"] #mobile-nav .lang-toggle {
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.10);
+}
+[data-theme="light"] #mobile-nav .lang-btn { color: var(--muted); }
+
+/* ── Trust Bar ──────────────────────────────────────────────── */
+[data-theme="light"] .trust-bar {
+  background: var(--bg-alt) !important;
+  border-top-color: var(--border) !important;
+  border-bottom-color: var(--border) !important;
+}
+[data-theme="light"] .trust-bar p {
+  color: var(--faint) !important;
+}
+[data-theme="light"] .trust-logo {
+  color: var(--muted);
+  opacity: 1;
+}
+/* White-stroke generic icons → themed in light mode */
+[data-theme="light"] .trust-bar svg[stroke*="255,255,255"] {
+  stroke: var(--muted) !important;
+}
+
+/* ── App Showcase Section ───────────────────────────────────── */
+.showcase-dark { background: #070b14; }
+[data-theme="light"] .showcase-dark {
+  background: var(--bg-alt) !important;
+}
+[data-theme="light"] .showcase-dark .section-chip-dark {
+  background: rgba(0,212,255,0.10) !important;
+  border-color: rgba(0,212,255,0.20) !important;
+  color: #00d4ff !important;
+}
+[data-theme="light"] .showcase-heading {
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+}
+[data-theme="light"] .showcase-desc {
+  color: var(--muted) !important;
+}
+/* Tab buttons inside showcase */
+[data-theme="light"] .tab-btn {
+  color: var(--muted);
+}
+[data-theme="light"] .tab-btn:hover {
+  color: #00d4ff;
+}
+[data-theme="light"] .tab-btn.active {
+  background: rgba(0,212,255,0.12);
+  color: #00d4ff;
+  box-shadow: inset 0 0 0 1px rgba(0,212,255,0.25);
+}
+
+/* ── Site Footer ────────────────────────────────────────────── */
+.site-footer {
+  background: #070b14;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+[data-theme="light"] .site-footer {
+  background: var(--bg-alt) !important;
+  border-top-color: var(--border) !important;
+}
+[data-theme="light"] .site-footer .footer-logo-text {
+  color: var(--text) !important;
+}
+/* Body paragraphs */
+[data-theme="light"] .site-footer p {
+  color: var(--muted) !important;
+}
+/* Navigation links */
+[data-theme="light"] .site-footer a {
+  color: var(--muted) !important;
+}
+[data-theme="light"] .site-footer a:hover {
+  color: #00d4ff !important;
+}
+/* Column header divs (with inline color style) */
+[data-theme="light"] .site-footer div[style*="color:rgba(255,255,255"] {
+  color: var(--faint) !important;
+}
+/* Footer separator border */
+[data-theme="light"] .site-footer div[style*="border-top"] {
+  border-top-color: var(--border) !important;
+}
+/* Bottom disclaimer text */
+[data-theme="light"] .site-footer .pt-8 > p {
+  color: var(--faint) !important;
+}
+
+/* ── Navbar (nicht gescrollt) – light mode ──────────────────── */
+/* Brand "Safe"-Text */
+[data-theme="light"] #nav .nav-brand-text { color: var(--text) !important; }
+/* Desktop Nav-Pill */
+[data-theme="light"] #nav nav {
+  background: rgba(0,0,0,0.06) !important;
+  border-color: rgba(0,0,0,0.10) !important;
+}
+[data-theme="light"] #nav nav a { color: var(--muted) !important; }
+[data-theme="light"] #nav nav a:hover {
+  color: var(--text) !important;
+  background: rgba(0,0,0,0.06) !important;
+}
+/* Hamburger-Striche */
+[data-theme="light"] #mobile-menu-btn span {
+  background: rgba(15,23,42,0.60) !important;
+}
+/* Lang-Toggle (Desktop) */
+[data-theme="light"] .lang-toggle {
+  background: rgba(0,0,0,0.06) !important;
+  border-color: rgba(0,0,0,0.10) !important;
+}
+[data-theme="light"] .lang-btn:not(.active-lang) { color: var(--muted) !important; }
+/* Theme-Button */
+[data-theme="light"] .theme-btn {
+  color: var(--muted) !important;
+  background: rgba(0,0,0,0.06) !important;
+  border-color: rgba(0,0,0,0.10) !important;
+}
+
+/* ── Notification Toast (Definition + light mode) ───────────── */
+.notification-toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(17,24,39,0.95);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+}
+[data-theme="light"] .notification-toast {
+  background: rgba(255,255,255,0.96) !important;
+  border-color: rgba(0,0,0,0.10) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10) !important;
+  color: var(--text) !important;
+}
+[data-theme="light"] .notification-toast .font-semibold { color: var(--text) !important; }
+[data-theme="light"] .notification-toast [class*="text-white"] { color: var(--faint) !important; }
+
+/* ── iPhone App-Mockup – light mode ─────────────────────────── */
+/* Screens-Hintergrund */
+[data-theme="light"] .iphone-screen { background: #f4f6f8 !important; }
+[data-theme="light"] .screen-dashboard,
+[data-theme="light"] .screen-upload,
+[data-theme="light"] .screen-analysis { background: #f4f6f8 !important; }
+/* App-Screen generic (screen 4 workflow) */
+[data-theme="light"] .app-screen { background: #f4f6f8; }
+/* KPI-Karten */
+[data-theme="light"] .kpi-card {
+  background: rgba(0,0,0,0.05) !important;
+  border-color: rgba(0,0,0,0.09) !important;
+}
+[data-theme="light"] .kpi-label { color: rgba(15,23,42,0.45) !important; }
+/* Case-Listenzeilen */
+[data-theme="light"] .case-list-item {
+  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+}
+/* Analysis-Datenzeilen */
+[data-theme="light"] .data-row {
+  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+}
+[data-theme="light"] .data-key { color: rgba(15,23,42,0.40) !important; }
+[data-theme="light"] .data-val { color: rgba(15,23,42,0.80) !important; }
+/* Upload-Zone */
+[data-theme="light"] .upload-hint { color: rgba(15,23,42,0.40) !important; }
+/* Inline-Styles via Attribut-Selektoren */
+/* Weißer Text → Dunkel */
+[data-theme="light"] .iphone-screen [style*="color:#fff"] { color: #0f172a !important; }
+[data-theme="light"] .iphone-screen [style*="color:rgba(255,255,255"] {
+  color: rgba(15,23,42,0.55) !important;
+}
+/* Dunkle Hintergründe → Hell */
+[data-theme="light"] .iphone-screen [style*="background:#070b14"] {
+  background: #f4f6f8 !important;
+}
+[data-theme="light"] .iphone-screen [style*="background:rgba(255,255,255"] {
+  background: rgba(0,0,0,0.04) !important;
+}
+[data-theme="light"] .iphone-screen [style*="background:rgba(30,40,60"] {
+  background: rgba(0,0,0,0.10) !important;
+}

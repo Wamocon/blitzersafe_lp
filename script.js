@@ -22,9 +22,9 @@
         var isActive = id.indexOf('-' + l) !== -1 && id.indexOf('-m') === (id.endsWith('-m') ? id.length - 2 : -1);
         // simpler: check suffix
         if (id === 'lang-' + l || id === 'lang-' + l + '-m') {
-          el.classList.add('active');
+          el.classList.add('active-lang');
         } else {
-          el.classList.remove('active');
+          el.classList.remove('active-lang');
         }
       });
 
