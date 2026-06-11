@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 const fs = require('fs');
 const path = require('path');
 
@@ -30,7 +30,7 @@ console.log('\nRequired HTML IDs:');
 });
 
 console.log('\nProduction URL:');
-test('blitzersafe.vercel.app >= 5x', function(){
+test('www.blitzersafe.eu >= 5x', function(){
   var n=(html.match(/blitzersafe\.vercel\.app/g)||[]).length;
   return n>=5||'Found '+n;
 });
